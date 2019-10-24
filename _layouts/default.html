@@ -71,17 +71,19 @@ ga('send', 'pageview');
                 <a class="nav-link" href="{{ site.baseurl }}/index.html">Blog</a>
                 </li>
 
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Fashion Design Lab</a>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="#">Learn How To Sew</a>
-                        <a class="dropdown-item" href="#">Master Illustrator</a>
-                        <!-- <div class="dropdown-divider"></div> -->
-                        <!-- <a class="dropdown-item" href="#">Separated link</a> -->
-                    </div>
+                {% if page.url == "/fashion-design-lab" %}
+                <li class="nav-item active">
+                {% else %}
+                <li class="nav-item">
+                {% endif %}
+                <a class="nav-link" href="{{ site.baseurl }}/fashion-design-lab">Fashion Design Lab</a>
                 </li>
 
+                {% if page.url == "/about" %}
+                <li class="nav-item active">
+                {% else %}
                 <li class="nav-item">
+                {% endif %}
                 <a class="nav-link" href="{{ site.baseurl }}/about">About</a>
                 </li>
 
